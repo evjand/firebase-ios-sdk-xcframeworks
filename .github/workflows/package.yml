@@ -2,12 +2,10 @@ name: Publish Release
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/60 */2 * * *' # Every 2 hours
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v2
